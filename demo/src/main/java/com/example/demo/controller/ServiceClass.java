@@ -10,12 +10,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class ServiceClass extends Model<String> {
 
-  @Autowired
+  //@Autowired
   private Chamada<ServiceClass> chamada;
 
-  @Bean
-  public Chamada<ServiceClass> chamada() {
-    return new Chamada<ServiceClass>(ServiceClass.class);
+  //@Bean
+  public ServiceClass() {
+    chamada = new Chamada<ServiceClass>(ServiceClass.class);
   }
 
   public String testeChamada() throws InterruptedException, ExecutionException {
